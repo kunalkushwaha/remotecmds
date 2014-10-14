@@ -8,7 +8,6 @@ import (
 	"strings"
 )
 
-
 func main() {
 	const jsonStream = `
 			{
@@ -39,22 +38,22 @@ func main() {
 		}
 		//fmt.Printf("%s: %s : %s\n", m.Name, m.Text, m.text2)
 		//fmt.Printf("%s\n", m["clients"])
-		
+
 	}
 	element := m["clients"]
 	for _, abc := range element {
- 
-		fmt.Printf(" %s\n",abc)
+
+		fmt.Printf(" %s\n", abc)
 	}
 
 	type Response2 struct {
-	    IP   string      `json:"page"`
-	    User []string `json:"fruits"`
-	    //Pass string
+		IP   string   `json:"page"`
+		User []string `json:"fruits"`
+		//Pass string
 	}
 	//str := `{"page": 1, "fruits": ["apple", "peach"]}`
-	    res := &Response2{}
-	    json.Unmarshal([]byte(jsonStream), &res)
-	    fmt.Println(res)
-	    fmt.Println(res.IP)
+	res := &Response2{}
+	json.Unmarshal([]byte(jsonStream), &res)
+	fmt.Println(res)
+	fmt.Println(res.IP)
 }

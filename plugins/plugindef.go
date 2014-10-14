@@ -1,8 +1,8 @@
 package plugins
 
 import (
-	"code.google.com/p/go.crypto/ssh"
 	"bytes"
+	"code.google.com/p/go.crypto/ssh"
 )
 
 //Define Plugin interface.
@@ -14,6 +14,6 @@ type WorkerPlugin interface {
 
 //Default member variables of each plugin.
 type WorkerType struct {
-	Context *ssh.Session
+	Context      *ssh.Session
 	OutputBuffer bytes.Buffer
 }
