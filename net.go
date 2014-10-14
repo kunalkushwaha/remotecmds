@@ -10,7 +10,7 @@ func connect_to_machine(IP_name string) (*ssh.Session, error) {
 			ssh.Password("root123"),
 		},
 	}
-	client, err := ssh.Dial("tcp", "172.26.126.11:22", config)
+	client, err := ssh.Dial("tcp", IP_name, config)
 	if err != nil {
 		panic("Failed to dial: " + err.Error())
 	}
